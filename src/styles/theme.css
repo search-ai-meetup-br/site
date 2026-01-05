@@ -1,1 +1,13 @@
-@theme {}
+@theme {
+    --color-primary: #0284C7;
+    --color-secondary: #044A6E;
+
+    --color-background: #030208;
+    --color-surface: #0A0E1A;
+
+    --color-text-titles: #FFFFFF;
+    --color-text-body: #94A3B8;
+
+    --font-display: "Space Grotesk", sans-serif;
+    --font-default: "Inter", sans-serif;
+}

@@ -9,4 +9,8 @@
         @apply scroll-smooth;
     }
 
+    body {
+        @apply bg-background font-default text-text-body;
+    }
+
 }
