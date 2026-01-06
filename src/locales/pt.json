@@ -1,1 +1,17 @@
-{}
+{
+    "hero": {
+        "logoAlt": "Logotipo do Search & AI Meetup BR",
+        "title": "Search & AI",
+        "highlight": "Meetup BR",
+        "description": "A primeira comunidade brasileira dedicada à tecnologia de busca e inteligência artificial",
+        "buttons": {
+            "join": "Juntar-se à comunidade",
+            "events": "Ver próximos eventos"
+        },
+        "links": {
+            "linkedin": "Acessar o LinkedIn do Search & AI Meetup BR",
+            "email": "Enviar e-mail para o Search & AI Meetup BR",
+            "meetup": "Acessar o grupo do Search & AI Meetup BR no Meetup"
+        }
+    }
+}

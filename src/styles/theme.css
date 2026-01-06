@@ -10,4 +10,18 @@
 
     --font-display: "Space Grotesk", sans-serif;
     --font-default: "Inter", sans-serif;
+
+    --text-shadow: 0 2px 8px rgba(2, 132, 199, 0.15);
+    --shadow: 0 2px 8px rgba(2, 132, 199, 0.15);
+
+    --gradient-metal: linear-gradient(45deg,
+            #014466 0%,
+            #0284C7 30%,
+            #68D0F8 40%,
+            #2FA6E1 55%,
+            #026B9F 70%,
+            #0284C7 100%);
+
+    --breakpoint-xs: 23.4375rem;
+
 }
