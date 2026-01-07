@@ -42,7 +42,7 @@ export default function About() {
                         <motion.div
                             {...animProps}
                             key={card.id}
-                            className={`bg-surface shadow p-6 rounded-xl flex flex-col items-start gap-2 ${card.id === "share" ? "border-t-6 border-primary sm:col-start-2 sm:row-start-2 lg:col-start-2 lg:row-start-1 lg:-translate-y-6" : ""} ${card.id !== "share" ? "lg:translate-y-6" : ""} sm:col-span-2 lg:col-span-1`}>
+                            className={`bg-surface shadow p-6 rounded-xl flex flex-col items-start gap-2 ${card.id === "share" ? "border-t-6 border-primary sm:col-start-2 sm:row-start-2 lg:col-start-2 lg:row-start-1 lg:-translate-y-6" : ""} ${card.id !== "share" ? "lg:translate-y-6" : ""} sm:col-span-2 lg:col-span-1 hover:shadow-hover transition-shadow-transform duration-500`}>
                             <div className='bg-primary/10 text-primary rounded-sm p-2'>
                                 <Icon className="w-6 h-6" />
                             </div>
