@@ -33,5 +33,31 @@
                 "description": "Promover o networking e a construção de uma comunidade técnica ativa por meio de encontros presenciais e online."
             }
         }
+    },
+    "events": {
+        "title": "Próximos Eventos",
+        "cards": {
+            "jan": {
+                "title": "1º Meetup Search & AI BR"
+            },
+            "mar": {
+                "title": "Title"
+            },
+            "apr": {
+                "title": "Title"
+            },
+            "jul": {
+                "title": "Title"
+            },
+            "sep": {
+                "title": "Title"
+            },
+            "nov": {
+                "title": "Title"
+            }
+        },
+        "buttons": {
+            "join": "Inscreva-se"
+        }
     }
 }
