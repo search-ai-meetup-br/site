@@ -12,7 +12,7 @@
     --font-default: "Inter", sans-serif;
 
     --text-shadow: 0 2px 8px rgba(2, 132, 199, 0.15);
-    --shadow: 0 2px 8px rgba(2, 132, 199, 0.15);
+    --shadow: 0 0px 15px rgba(2, 132, 199, 0.10);
 
     --gradient-metal: linear-gradient(45deg,
             #014466 0%,

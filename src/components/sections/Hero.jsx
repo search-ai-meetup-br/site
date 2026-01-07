@@ -17,7 +17,7 @@ export default function Hero() {
     return (
         <motion.section
             id="hero"
-            className="grid-design content-center"
+            className="grid-design content-center h-screen"
             variants={heroIntro}
             initial="hidden"
             animate="show"
