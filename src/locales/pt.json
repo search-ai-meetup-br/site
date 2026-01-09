@@ -59,5 +59,23 @@
         "buttons": {
             "join": "Inscreva-se"
         }
+    },
+    "cta": {
+        "ctaSlides": {
+            "speaker": {
+                "title": "Seja um Palestrante",
+                "description": "Tem um evento interessante, um case de sucesso ou uma ideia legal sobre Search & IA? Envie sua proposta e ajude a construir os próximos meetups.",
+                "buttonText": "Quero palestrar"
+            },
+            "local": {
+                "title": "Ajude a encontrar o local do evento",
+                "description": "Conhece empresas ou espaços que possam sediar o meetup em São Paulo? Nos indique e ajude a tirar o evento do papel.",
+                "buttonText": "Indicar um local"
+            }
+        },
+        "arrows": {
+            "left": "Slide anterior",
+            "right": "Próximo slide"
+        }
     }
 }
