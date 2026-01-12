@@ -1,6 +1,7 @@
 import About from "../sections/About";
 import CTA from "../sections/CTA";
 import Events from "../sections/Events"
+import CodeOfCondute from '../sections/CodeOfCondute.jsx'
 
 export default function Main() {
     return (
@@ -8,6 +9,7 @@ export default function Main() {
             <About />
             <Events />
             <CTA />
+            <CodeOfCondute />
         </main>
     )
 }

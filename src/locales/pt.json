@@ -77,5 +77,24 @@
             "left": "Slide anterior",
             "right": "Próximo slide"
         }
+    },
+    "codeOfCondute": {
+        "title": "Código de Conduta",
+        "description": "Para garantir que a comuidade seja um espaço seguro, respeitoso e acolhedor, seguimos um Código de Conduta que orienta a convivência em todos os nossos encontros, online e presenciais.",
+        "button": "Ler código de conduta completo",
+        "cards": {
+            "inclusion": {
+                "title": "Comunidade inclusiva",
+                "description": "Valorizamos diversidade de trajetórias, experiências e níveis de conhecimento. Não toleramos discriminação, assédio ou exclusão de qualquer tipo."
+            },
+            "respect": {
+                "title": "Respeito acima de tudo",
+                "description": "Esperamos interações respeitosas, escuta ativa e debates técnicos construtivos, sempre focados em ideias — nunca em pessoas."
+            },
+            "security": {
+                "title": "Ambiente seguro",
+                "description": "Promovemos um espaço seguro para troca de conhecimento, onde comportamentos abusivos, ameaças ou violações de privacidade não são tolerados."
+            }
+        }
     }
 }
