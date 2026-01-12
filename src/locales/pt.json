@@ -96,5 +96,90 @@
                 "description": "Promovemos um espaço seguro para troca de conhecimento, onde comportamentos abusivos, ameaças ou violações de privacidade não são tolerados."
             }
         }
+    },
+    "codeOfCondutePage": {
+        "title": "Código de Conduta",
+        "description": "O Search & AI Meetup BR é uma comunidade criada para promover troca de conhecimento, aprendizado e colaboração em torno de Information Retrieval, Search Engineering e Inteligência Artificial aplicada. Queremos que todas as pessoas se sintam bem-vindas, seguras e respeitadas em nossos espaços — online e presenciais.",
+        "intro": "Para isso, estabelecemos este Código de Conduta, que se aplica a todos os participantes, palestrantes, organizadores e parceiros.",
+        "sections": [
+            {
+                "title": "Nossa comunidade é para todos",
+                "text": "Valorizamos a participação de pessoas de diferentes áreas, experiências, níveis de conhecimento e trajetórias. Não toleramos discriminação, assédio ou exclusão com base em — mas não limitado a:",
+                "points": [
+                    "Gênero, identidade ou expressão de gênero",
+                    "Orientação sexual",
+                    "Aparência física",
+                    "Raça, etnia ou origem",
+                    "Religião ou crença",
+                    "Deficiência",
+                    "Nível de conhecimento técnico",
+                    "Filiação profissional ou acadêmica"
+                ]
+            },
+            {
+                "title": "Seja respeitoso",
+                "text": "Esperamos que cada pessoa:",
+                "points": [
+                    "Trate os outros com respeito e cordialidade",
+                    "Assuma boas intenções nas interações",
+                    "Escute ativamente e permita que todas as vozes sejam ouvidas",
+                    "Reconheça que discordâncias técnicas são normais, mas não justificam comportamentos grosseiros"
+                ]
+            },
+            {
+                "title": "Não será tolerado",
+                "text": "Consideramos inaceitáveis comportamentos como:",
+                "points": [
+                    "Assédio verbal ou físico",
+                    "Intimidação",
+                    "Comentários ofensivos, depreciativos ou discriminatórios",
+                    "Interrupções agressivas ou dominância de conversas",
+                    "Contato físico não solicitado",
+                    "Assédio sexual de qualquer tipo",
+                    "Divulgação de informações privadas sem consentimento",
+                    "Uso de linguagem ou imagens sexualizadas em palestras, grupos ou materiais"
+                ]
+            },
+            {
+                "title": "Espaços seguros também significam espaços acolhedores",
+                "text": "Buscamos criar um ambiente onde:",
+                "points": [
+                    "Pessoas iniciantes possam fazer perguntas sem medo",
+                    "O compartilhamento de experiências seja valorizado",
+                    "As diferenças sejam tratadas com maturidade",
+                    "Críticas sejam construtivas e direcionadas a ideias, não a pessoas"
+                ]
+            },
+            {
+                "title": "Em caso de problema",
+                "text": "Se você for alvo ou testemunhar qualquer comportamento inadequado, entre em contato imediatamente com a organização. Para encontros presenciais, os organizadores estarão identificáveis e disponíveis para conversar de forma discreta e segura."
+            },
+            {
+                "title": "Consequências e medidas",
+                "text": "A organização poderá tomar ações como:",
+                "points": [
+                    "Advertência verbal",
+                    "Remoção da pessoa de grupos online",
+                    "Pedido de desculpas formais",
+                    "Expulsão de eventos presenciais sem reembolso",
+                    "Comunicação a parceiros ou autoridades, em casos graves"
+                ],
+                "footer": "As decisões serão tomadas com base no bem-estar coletivo."
+            },
+            {
+                "title": "Compromisso da organização",
+                "text": "Nós, organizadores do Search & AI Meetup BR, nos comprometemos a:",
+                "points": [
+                    "Aplicar este Código de Conduta de forma consistente e justa",
+                    "Dar suporte a quem relatar incidentes",
+                    "Criar eventos e espaços cada vez mais inclusivos",
+                    "Cultivar uma comunidade aberta, diversa e respeitosa"
+                ]
+            }
+        ],
+        "conclusion": [
+            "Ao entrar nos grupos online e participar dos meetups, todos concordam com este Código de Conduta.",
+            "Obrigada por fazer parte do Search & AI Meetup BR!"
+        ]
     }
 }

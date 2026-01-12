@@ -2,10 +2,12 @@ import { motion } from 'framer-motion'
 import { useTranslation } from "react-i18next";
 import { codeOfConduteCards } from "../../data/codeOfConduteCards.js";
 import { fadeUp } from "../../animations/reveal.js"
+import { useNavigate } from 'react-router-dom';
 
 export default function CodeOfCondute() {
 
     const { t } = useTranslation();
+    const navigate = useNavigate();
 
     const animProps = {
         variants: fadeUp,
@@ -22,7 +24,9 @@ export default function CodeOfCondute() {
                     className='col-span-4 space-y-3 sm:col-span-8 md:col-span-4 lg:col-span-6'>
                     <h2 className='text-2xl xs:text-3xl lg:text-4xl'>{t("codeOfCondute.title")}</h2>
                     <p>{t("codeOfCondute.description")}</p>
-                    <button className='border text-sm border-primary p-2.5 text-primary rounded-lg hover:bg-primary/20 cursor-pointer active:text-text-titles active:border-text-titles active:scale-98 transition-colors-transform duration-300'>{t("codeOfCondute.button")}</button>
+                    <button
+                        onClick={() => navigate('/code-of-conduct')}
+                        className='border text-sm border-primary p-2.5 text-primary rounded-lg hover:bg-primary/20 cursor-pointer active:text-text-titles active:border-text-titles active:scale-98 transition-colors-transform duration-300'>{t("codeOfCondute.button")}</button>
                 </motion.div>
                 <div className='col-span-4 flex flex-col gap-8 mt-4 sm:col-span-8 md:mt-0 md:col-span-4 lg:col-span-6'>
                     {codeOfConduteCards.map((card) => {

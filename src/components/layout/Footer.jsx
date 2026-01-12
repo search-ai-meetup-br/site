@@ -1,5 +1,7 @@
-export default function Footer() {
+export default function Footer({ children }) {
     return (
-        <footer id="footer"></footer>
+        <footer id="footer">
+            {children}
+        </footer>
     )
 }
