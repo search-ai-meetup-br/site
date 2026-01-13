@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { ctaSlides } from "../../data/ctaSlides"
 import { motion } from "framer-motion"
 import { useTranslation } from "react-i18next"
@@ -9,12 +9,32 @@ import { fadeUp } from "../../animations/reveal.js"
 export default function CTA() {
     const { t } = useTranslation()
     const [index, setIndex] = useState(0)
+    const intervalRef = useRef(null)
 
-    const next = () =>
+    const next = () => {
+        stopAutoplay()
         setIndex((prev) => (prev + 1) % ctaSlides.length)
+        startAutoplay()
+    }
 
-    const prev = () =>
+    const prev = () => {
+        stopAutoplay()
         setIndex((prev) => (prev - 1 + ctaSlides.length) % ctaSlides.length)
+        startAutoplay()
+    }
+
+
+    const startAutoplay = () => {
+        clearInterval(intervalRef.current)
+
+        intervalRef.current = setInterval(() => {
+            setIndex((prev) => (prev + 1) % ctaSlides.length)
+        }, 6000)
+    }
+
+    const stopAutoplay = () => {
+        clearInterval(intervalRef.current)
+    }
 
     const animProps = {
         variants: fadeUp,
@@ -24,13 +44,9 @@ export default function CTA() {
     };
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setIndex((prev) => (prev + 1) % ctaSlides.length)
-        }, 6000)
-
-        return () => clearInterval(interval)
+        startAutoplay()
+        return () => stopAutoplay()
     }, [])
-
 
     return (
         <section
@@ -79,7 +95,11 @@ export default function CTA() {
                         {ctaSlides.map((_, i) => (
                             <button
                                 key={i}
-                                onClick={() => setIndex(i)}
+                                onClick={() => {
+                                    stopAutoplay()
+                                    setIndex(i)
+                                    startAutoplay()
+                                }}
                                 className={`w-1.5 h-1.5 rounded-full transition ${i === index ? "bg-primary scale-125 hover:bg-secondary" : "bg-text-body hover:bg-text-titles"} cursor-pointer focus-visible:outline-none focus-visible:ring focus-visible:ring-text-body`}
                             />
                         ))}
