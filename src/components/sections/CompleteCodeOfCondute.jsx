@@ -1,16 +1,22 @@
 import { useTranslation } from "react-i18next";
 import { motion } from 'framer-motion'
+import { useEffect } from "react";
 import { fadeUp } from "../../animations/reveal.js"
 
 
 export default function CodeOfConductPage() {
     const { t } = useTranslation();
+
     const animProps = {
         variants: fadeUp,
         initial: "hidden",
         whileInView: "show",
         viewport: { once: true, margin: "-50px" },
     };
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "instant" });
+    }, []);
 
     return (
         <section>
@@ -81,7 +87,7 @@ export default function CodeOfConductPage() {
                             (line, idx) => (
                                 <p
                                     key={idx}
-                                    className="mb-10 last:text-primary last:text-xl last:font-semibold last:font-display last:mb-0"
+                                    className="mb-10 last:text-primary last:text-md last:font-semibold last:font-display last:mb-0"
                                 >
                                     {line}
                                 </p>

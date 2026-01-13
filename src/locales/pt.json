@@ -1,4 +1,14 @@
 {
+    "navBar": {
+        "about": "Sobre",
+        "events": "Eventos",
+        "cta": "Palestrar",
+        "codeOfCondute": "Código de Conduta",
+        "back": {
+            "sm": "Voltar",
+            "md": "Voltar para Home"
+        }
+    },
     "hero": {
         "logoAlt": "Logotipo do Search & AI Meetup BR",
         "title": "Search & AI",

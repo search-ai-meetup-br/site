@@ -7,11 +7,13 @@ import Events from "../components/sections/Events.jsx"
 import CTA from "../components/sections/CTA.jsx"
 import CodeOfCondute from "../components/sections/CodeOfCondute.jsx"
 import Hero from "../components/sections/Hero.jsx"
+import NavBar from "../components/navs/NavBar.jsx"
 
 export default function Home() {
     return (
         <>
             <Header>
+                <NavBar />
                 <Hero />
             </Header>
             <Main>
