@@ -1,8 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { motion } from 'framer-motion'
-import { useEffect } from "react";
 import { fadeUp } from "../../animations/reveal.js"
-
 
 export default function CodeOfConductPage() {
     const { t } = useTranslation();
@@ -13,10 +11,6 @@ export default function CodeOfConductPage() {
         whileInView: "show",
         viewport: { once: true, margin: "-50px" },
     };
-
-    useEffect(() => {
-        window.scrollTo({ top: 0, behavior: "instant" });
-    }, []);
 
     return (
         <section>
