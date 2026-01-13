@@ -13,7 +13,7 @@ export default function CodeOfConductPage() {
     };
 
     return (
-        <section>
+        <section className="bg-linear-to-br from-background to-primary/5">
 
             <div className="max-w-7xl mx-auto grid-design">
 

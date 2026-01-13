@@ -52,6 +52,7 @@ export default function Events() {
                                         </div>
                                         <a
                                             href={event.link}
+                                            target="_blank" rel="noopener noreferrer"
                                             className="mt-4 block rounded-lg p-2 text-center font-display bg-surface text-text-titles transition-all duration-500 group-hover:bg-primary/70 group-hover:shadow-hover active:scale-98 focus-visible:outline-none focus-visible:ring focus-visible:ring-text-body focus-visible:scale-[102%]"
                                         >
                                             {t("events.buttons.join")}

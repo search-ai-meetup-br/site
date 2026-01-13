@@ -51,7 +51,7 @@ export default function CTA() {
     return (
         <section
             id="cta"
-            className="relative bg-[url('/bg-cta.png')] bg-cover bg-center"
+            className="relative bg-[url('/bg-cta.png')] bg-cover bg-center py-6"
         >
             <div className="absolute inset-0 bg-background/40 z-0" />
 
@@ -75,7 +75,7 @@ export default function CTA() {
                                     </p>
 
                                     <a
-                                        href={slide.action}
+                                        href={slide.link}
                                         target="_blank" rel="noopener noreferrer"
                                         className="bg-linear-to-r cursor-pointer shadow from-primary to-secondary text-text-titles font-display font-semibold p-3 rounded-lg text-sm transition duration-500 hover:brightness-120 hover:scale-[102%] active:scale-98 focus-visible:outline-none focus-visible:ring focus-visible:ring-text-body focus-visible:scale-[102%]"
                                     >

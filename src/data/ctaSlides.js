@@ -6,7 +6,7 @@ export const ctaSlides = [
         title: "cta.ctaSlides.speaker.title",
         description: "cta.ctaSlides.speaker.description",
         buttonText: "cta.ctaSlides.speaker.buttonText",
-        link: "#",
+        link: "https://docs.google.com/forms/d/e/1FAIpQLSc9AilIYqJYdlnXRWuk8OMjRBXNhJy0mUGmEPdpbldQdNIdHA/viewform",
     },
     {
         id: "local",

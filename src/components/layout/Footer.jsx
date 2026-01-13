@@ -9,7 +9,7 @@ export default function Footer() {
     const { t } = useTranslation();
 
     return (
-        <footer id="footer" className="">
+        <footer id="footer" className="border-t border-text-body/20">
             <div className='grid-design max-w-7xl mx-auto'>
                 <div className="col-span-4 lg:col-span-5 space-y-4">
                     <div
@@ -28,24 +28,28 @@ export default function Footer() {
                 <div className='col-span-4 sm:col-start-6 lg:col-span-5 lg:col-start-8 space-y-4'>
                     <h2 className="text-md">{t("footer.connect")}</h2>
                     <div className="flex gap-4">
-                        <IconLinkedin
+                        <a
                             href="#"
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label={t("footer.links.linkedin")}
-                            className="h-6 w-6 transition-colors-transform duration-300 hover:text-primary hover:scale-105 active:scale-[98%] focus-visible:outline-none focus-visible:scale-105 focus-visible:text-primary cursor-pointer" />
-                        <IconEmail
-                            href="#"
+                            aria-label={t("footer.links.linkedin")}>
+                            <IconLinkedin
+                                className="h-6 w-6 transition-colors-transform duration-300 hover:text-primary hover:scale-105 active:scale-[98%] focus-visible:outline-none focus-visible:scale-105 focus-visible:text-primary cursor-pointer" />
+                        </a>
+                        <a
+                            href="mailto:searchai-meetupbr@outlook.com"
+                            aria-label={t("footer.links.email")}>
+                            <IconEmail
+                                className="h-6 w-6 transition-colors-transform duration-300 hover:text-primary hover:scale-105 active:scale-[98%] focus-visible:outline-none focus-visible:scale-105 focus-visible:text-primary cursor-pointer" />
+                        </a>
+                        <a
+                            href="https://www.meetup.com/search-ai-meetup-br/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label={t("footer.links.email")}
-                            className="h-6 w-6 transition-colors-transform duration-300 hover:text-primary hover:scale-105 active:scale-[98%] focus-visible:outline-none focus-visible:scale-105 focus-visible:text-primary cursor-pointer" />
-                        <IconMeetup
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={t("footer.links.meetup")}
-                            className="h-6 w-6 transition-colors-transform duration-300 hover:text-primary hover:scale-105 active:scale-[98%] focus-visible:outline-none focus-visible:scale-105 focus-visible:text-primary cursor-pointer" />
+                            aria-label={t("footer.links.meetup")}>
+                            <IconMeetup
+                                className="h-6 w-6 transition-colors-transform duration-300 hover:text-primary hover:scale-105 active:scale-[98%] focus-visible:outline-none focus-visible:scale-105 focus-visible:text-primary cursor-pointer" />
+                        </a>
                     </div>
                 </div>
             </div>
