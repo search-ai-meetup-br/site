@@ -29,7 +29,7 @@ export default function Footer() {
                     <h2 className="text-md">{t("footer.connect")}</h2>
                     <div className="flex gap-4">
                         <a
-                            href="#"
+                            href="https://www.linkedin.com/company/search-ai-meetup-br/"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label={t("footer.links.linkedin")}>

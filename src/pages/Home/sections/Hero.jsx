@@ -83,7 +83,7 @@ export default function Hero() {
                 <motion.div
                     className="flex gap-4 col-span-4 items-center justify-center sm:col-span-6 sm:col-start-2 lg:col-start-4"
                     variants={fadeUpSoft}>
-                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label={t("hero.links.linkedin")} className="transition-colors-transform duration-300 hover:text-primary hover:scale-105 active:scale-[98%] focus-visible:outline-none focus-visible:scale-105 focus-visible:text-primary"><IconLinkedin className="h-7" /></a>
+                    <a href="https://www.linkedin.com/company/search-ai-meetup-br/" target="_blank" rel="noopener noreferrer" aria-label={t("hero.links.linkedin")} className="transition-colors-transform duration-300 hover:text-primary hover:scale-105 active:scale-[98%] focus-visible:outline-none focus-visible:scale-105 focus-visible:text-primary"><IconLinkedin className="h-7" /></a>
                     <a href="mailto:searchai-meetupbr@outlook.com" aria-label={t("hero.links.email")} className="transition-colors-transform duration-300 hover:text-primary hover:scale-105 active:scale-[98%] focus-visible:outline-none focus-visible:scale-105 focus-visible:text-primary"><IconEmail className="h-7" /></a>
                     <a href="https://www.meetup.com/search-ai-meetup-br/" target="_blank" rel="noopener noreferrer" aria-label={t("hero.links.meetup")} className="transition-colors-transform duration-300 hover:text-primary hover:scale-105 active:scale-[98%] focus-visible:outline-none focus-visible:scale-105 focus-visible:text-primary"><IconMeetup className="h-7" /></a>
                 </motion.div>
