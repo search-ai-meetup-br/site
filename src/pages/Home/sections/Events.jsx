@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from "react-i18next"
-import { EVENT_STATUS, events } from "../../data/events.js"
-import { fadeUp } from "../../animations/reveal.js"
-import IconPin from "../../assets/icons/i-pin.svg?react"
-import IconClock from "../../assets/icons/i-clock.svg?react"
+import { EVENT_STATUS, events } from "../../../data/events.js"
+import { fadeUp } from "../../../animations/reveal.js"
+import IconPin from "../../../assets/icons/i-pin.svg?react"
+import IconClock from "../../../assets/icons/i-clock.svg?react"
 
 export default function Events() {
 

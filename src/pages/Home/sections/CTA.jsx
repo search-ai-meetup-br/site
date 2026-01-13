@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from "react"
-import { ctaSlides } from "../../data/ctaSlides"
+import { ctaSlides } from "../../../data/ctaSlides"
 import { motion } from "framer-motion"
 import { useTranslation } from "react-i18next"
-import ArrowLeft from "../../assets/icons/i-arrow-left.svg?react"
-import ArrowRight from "../../assets/icons/i-arrow-right.svg?react"
-import { fadeUp } from "../../animations/reveal.js"
+import ArrowLeft from "../../../assets/icons/i-arrow-left.svg?react"
+import ArrowRight from "../../../assets/icons/i-arrow-right.svg?react"
+import { fadeUp } from "../../../animations/reveal.js"
 
 export default function CTA() {
     const { t } = useTranslation()

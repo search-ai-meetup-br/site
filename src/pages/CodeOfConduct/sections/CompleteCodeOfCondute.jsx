@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { motion } from 'framer-motion'
-import { fadeUp } from "../../animations/reveal.js"
+import { fadeUp } from "../../../animations/reveal.js"
 
 export default function CodeOfConductPage() {
     const { t } = useTranslation();

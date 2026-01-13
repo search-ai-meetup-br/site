@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
-import IconLinkedin from "../../assets/icons/i-linkedin.svg?react"
-import IconEmail from "../../assets/icons/i-email.svg?react"
-import IconMeetup from "../../assets/icons/i-meetup.svg?react"
-import Logo from "../../assets/images/logo.svg?react"
+import IconLinkedin from "../../../assets/icons/i-linkedin.svg?react"
+import IconEmail from "../../../assets/icons/i-email.svg?react"
+import IconMeetup from "../../../assets/icons/i-meetup.svg?react"
+import Logo from "../../../assets/images/logo.svg?react"
 import { motion } from "framer-motion";
-import { titleContainer, titleWord, fadeUpSoft, heroIntro } from "../../animations/reveal.js";
+import { titleContainer, titleWord, fadeUpSoft, heroIntro } from "../../../animations/reveal.js";
 
 
 export default function Hero() {

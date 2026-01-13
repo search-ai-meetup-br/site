@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from "react-i18next";
-import { aboutCards } from "../../data/aboutCards";
-import { fadeUp } from "../../animations/reveal.js"
+import { aboutCards } from "../../../data/aboutCards";
+import { fadeUp } from "../../../animations/reveal.js"
 
 export default function About() {
 

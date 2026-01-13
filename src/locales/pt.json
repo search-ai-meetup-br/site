@@ -191,5 +191,14 @@
             "Ao entrar nos grupos online e participar dos meetups, todos concordam com este Código de Conduta.",
             "Obrigada por fazer parte do Search & AI Meetup BR!"
         ]
+    },
+    "footer": {
+        "description": "A primeira comunidade brasileira dedicada à tecnologia de busca e inteligência artificial",
+        "connect": "Conectar-se",
+        "links": {
+            "linkedin": "Acessar o LinkedIn do Search & AI Meetup BR",
+            "email": "Enviar e-mail para o Search & AI Meetup BR",
+            "meetup": "Acessar o grupo do Search & AI Meetup BR no Meetup"
+        }
     }
 }

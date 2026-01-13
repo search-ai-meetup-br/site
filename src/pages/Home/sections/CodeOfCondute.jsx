@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from "react-i18next";
-import { codeOfConduteCards } from "../../data/codeOfConduteCards.js";
-import { fadeUp } from "../../animations/reveal.js"
+import { codeOfConduteCards } from "../../../data/codeOfConduteCards.js";
+import { fadeUp } from "../../../animations/reveal.js"
 import { useNavigate } from 'react-router-dom';
 
 export default function CodeOfCondute() {
@@ -17,7 +17,7 @@ export default function CodeOfCondute() {
     };
 
     return (
-        <section id="codeOfCondute">
+        <section id="codeOfCondute" className='bg-surface'>
             <div className='grid-design max-w-7xl mx-auto'>
                 <motion.div
                     {...animProps}
