@@ -1,1 +1,208 @@
-{}
+{
+    "navBar": {
+        "about": "About",
+        "events": "Events",
+        "cta": "Speak",
+        "codeOfCondute": "Code of Conduct",
+        "back": {
+            "sm": "Back",
+            "md": "Back to Home"
+        },
+        "languages": {
+            "en": "Change language to English",
+            "pt": "Change language to Portuguese"
+        }
+    },
+    "hero": {
+        "logoAlt": "Search & AI Meetup BR logo",
+        "title": "Search & AI",
+        "highlight": "Meetup BR",
+        "description": "The first Brazilian community dedicated to search technology and artificial intelligence",
+        "buttons": {
+            "join": "Join the community",
+            "events": "See upcoming events"
+        },
+        "links": {
+            "linkedin": "Visit the Search & AI Meetup BR LinkedIn page",
+            "email": "Send an email to Search & AI Meetup BR",
+            "meetup": "Visit the Search & AI Meetup BR group on Meetup"
+        }
+    },
+    "about": {
+        "titleLine1": "Welcome to",
+        "titleLine2": "Search & AI",
+        "highlight": "Meetup BR",
+        "description": "We are a community created to bring together professionals, students, and researchers interested in Search, AI, and related technologies. Our goal is to build an open, collaborative, and accessible space where knowledge circulates and grows through collective participation.",
+        "cards": {
+            "explore": {
+                "title": "Explore Search & AI",
+                "description": "Discuss search systems, ranking, information retrieval, embeddings, LLMs, and how AI is increasingly transforming products."
+            },
+            "share": {
+                "title": "Share and learn",
+                "description": "Exchange real-world learnings and experiences from both industry and research, fostering a dynamic environment of knowledge sharing."
+            },
+            "connect": {
+                "title": "Connect people",
+                "description": "Encourage networking and build an active technical community through in-person and online meetups."
+            }
+        }
+    },
+    "events": {
+        "title": "Upcoming Events",
+        "cards": {
+            "jan": {
+                "title": "1st Search & AI BR Meetup"
+            },
+            "mar": {
+                "title": "Title"
+            },
+            "apr": {
+                "title": "Title"
+            },
+            "jul": {
+                "title": "Title"
+            },
+            "sep": {
+                "title": "Title"
+            },
+            "nov": {
+                "title": "Title"
+            }
+        },
+        "buttons": {
+            "join": "Register"
+        }
+    },
+    "cta": {
+        "ctaSlides": {
+            "speaker": {
+                "title": "Become a Speaker",
+                "description": "Do you have an interesting talk, a success case, or a cool idea about Search & AI? Submit your proposal and help shape our upcoming meetups.",
+                "buttonText": "I want to speak"
+            },
+            "local": {
+                "title": "Help us find a venue",
+                "description": "Do you know companies or spaces that could host our meetup in São Paulo? Let us know and help make the event happen.",
+                "buttonText": "Suggest a venue"
+            }
+        },
+        "arrows": {
+            "left": "Previous slide",
+            "right": "Next slide"
+        }
+    },
+    "codeOfCondute": {
+        "title": "Code of Conduct",
+        "description": "To ensure our community is a safe, respectful, and welcoming space, we follow a Code of Conduct that guides behavior at all our events, both online and in person.",
+        "button": "Read the full Code of Conduct",
+        "cards": {
+            "inclusion": {
+                "title": "Inclusive community",
+                "description": "We value diversity of backgrounds, experiences, and knowledge levels. We do not tolerate discrimination, harassment, or exclusion of any kind."
+            },
+            "respect": {
+                "title": "Respect above all",
+                "description": "We expect respectful interactions, active listening, and constructive technical discussions focused on ideas — never on people."
+            },
+            "security": {
+                "title": "Safe environment",
+                "description": "We promote a safe space for knowledge exchange, where abusive behavior, threats, or privacy violations are not tolerated."
+            }
+        }
+    },
+    "codeOfCondutePage": {
+        "title": "Code of Conduct",
+        "description": "Search & AI Meetup BR is a community created to promote knowledge sharing, learning, and collaboration around Information Retrieval, Search Engineering, and applied Artificial Intelligence. We want everyone to feel welcome, safe, and respected in our spaces — both online and in person.",
+        "intro": "To achieve this, we have established this Code of Conduct, which applies to all participants, speakers, organizers, and partners.",
+        "sections": [
+            {
+                "title": "Our community is for everyone",
+                "text": "We value the participation of people from different backgrounds, experiences, knowledge levels, and paths. We do not tolerate discrimination or harassment based on — but not limited to:",
+                "points": [
+                    "Gender, gender identity, or expression",
+                    "Sexual orientation",
+                    "Physical appearance",
+                    "Race, ethnicity, or origin",
+                    "Religion or belief",
+                    "Disability",
+                    "Technical knowledge level",
+                    "Professional or academic affiliation"
+                ]
+            },
+            {
+                "title": "Be respectful",
+                "text": "We expect everyone to:",
+                "points": [
+                    "Treat others with respect and kindness",
+                    "Assume good intentions in interactions",
+                    "Listen actively and allow all voices to be heard",
+                    "Recognize that technical disagreements are normal but do not justify rude behavior"
+                ]
+            },
+            {
+                "title": "Unacceptable behavior",
+                "text": "The following behaviors are considered unacceptable:",
+                "points": [
+                    "Verbal or physical harassment",
+                    "Intimidation",
+                    "Offensive, derogatory, or discriminatory comments",
+                    "Aggressive interruptions or dominating conversations",
+                    "Unwanted physical contact",
+                    "Sexual harassment of any kind",
+                    "Sharing private information without consent",
+                    "Use of sexualized language or imagery in talks, groups, or materials"
+                ]
+            },
+            {
+                "title": "Safe spaces are also welcoming spaces",
+                "text": "We aim to create an environment where:",
+                "points": [
+                    "Beginners feel comfortable asking questions",
+                    "Experience sharing is valued",
+                    "Differences are handled with maturity",
+                    "Feedback is constructive and directed at ideas, not people"
+                ]
+            },
+            {
+                "title": "In case of an issue",
+                "text": "If you experience or witness any inappropriate behavior, please contact the organizing team immediately. At in-person events, organizers will be identifiable and available to speak discreetly and safely."
+            },
+            {
+                "title": "Consequences and actions",
+                "text": "The organization may take actions such as:",
+                "points": [
+                    "Verbal warning",
+                    "Removal from online groups",
+                    "Request for a formal apology",
+                    "Removal from in-person events without refund",
+                    "Contacting partners or authorities in serious cases"
+                ],
+                "footer": "Decisions will be made based on the collective well-being."
+            },
+            {
+                "title": "Our commitment",
+                "text": "We, the organizers of Search & AI Meetup BR, commit to:",
+                "points": [
+                    "Applying this Code of Conduct consistently and fairly",
+                    "Supporting those who report incidents",
+                    "Creating increasingly inclusive events and spaces",
+                    "Cultivating an open, diverse, and respectful community"
+                ]
+            }
+        ],
+        "conclusion": [
+            "By joining our online groups and participating in meetups, everyone agrees to this Code of Conduct.",
+            "Thank you for being part of Search & AI Meetup BR!"
+        ]
+    },
+    "footer": {
+        "description": "The first Brazilian community dedicated to search technology and artificial intelligence",
+        "connect": "Connect",
+        "links": {
+            "linkedin": "Visit the Search & AI Meetup BR LinkedIn page",
+            "email": "Send an email to Search & AI Meetup BR",
+            "meetup": "Visit the Search & AI Meetup BR group on Meetup"
+        }
+    }
+}

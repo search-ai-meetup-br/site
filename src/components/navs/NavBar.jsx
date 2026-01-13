@@ -6,9 +6,13 @@ import { useTranslation } from "react-i18next";
 
 export default function NavBar() {
 
-    const { t } = useTranslation();
-
+    const { t, i18n } = useTranslation();
     const [open, setOpen] = useState(false);
+
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
+
     const handleNavigate = (e, target) => {
         e.preventDefault();
         setOpen(false);
@@ -43,8 +47,14 @@ export default function NavBar() {
                     </nav>
                     <span>|</span>
                     <div className="space-x-4">
-                        <button className="hover:text-primary transition-colors duration-300 active:text-secondary focus-visible:outline-none focus-visible:text-primary cursor-pointer">PT</button>
-                        <button className="hover:text-primary transition-colors duration-300 active:text-secondary focus-visible:outline-none focus-visible:text-primary cursor-pointer">EN</button>
+                        <button
+                            onClick={() => changeLanguage("pt")}
+                            aria-label={t("navBar.languages.pt")}
+                            className={`transition-colors duration-300 ${i18n.language === "pt" ? "text-primary font-semibold" : "hover:text-primary"} active:text-secondary focus-visible:outline-none focus-visible:text-primary cursor-pointer`}>PT</button>
+                        <button
+                            onClick={() => changeLanguage("en")}
+                            aria-label={t("navBar.languages.en")}
+                            className={`transition-colors duration-300 ${i18n.language === "en" ? "text-primary font-semibold" : "hover:text-primary"} active:text-secondary focus-visible:outline-none focus-visible:text-primary cursor-pointer`}>EN</button>
                     </div>
                 </div>
 
@@ -86,13 +96,19 @@ export default function NavBar() {
                             ))}
 
                             <div className="pt-4 border-t border-text-body/20 flex gap-4 justify-center">
-                                <button>PT</button>
-                                <button>EN</button>
+                                <button
+                                    onClick={() => changeLanguage("pt")}
+                                    aria-label={t("navBar.languages.pt")}
+                                    className={`transition-colors duration-300 ${i18n.language === "pt" ? "text-primary font-semibold" : "hover:text-primary"} active:text-secondary focus-visible:outline-none focus-visible:text-primary cursor-pointer`}>PT</button>
+                                <button
+                                    onClick={() => changeLanguage("en")}
+                                    aria-label={t("navBar.languages.en")}
+                                    className={`transition-colors duration-300 ${i18n.language === "en" ? "text-primary font-semibold" : "hover:text-primary"} active:text-secondary focus-visible:outline-none focus-visible:text-primary cursor-pointer`}>EN</button>
                             </div>
                         </nav>
                     </motion.div>
                 )}
             </AnimatePresence>
-        </div>
+        </div >
     );
 }

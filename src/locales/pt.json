@@ -7,6 +7,10 @@
         "back": {
             "sm": "Voltar",
             "md": "Voltar para Home"
+        },
+        "languages": {
+            "en": "Mudar o idioma para Inglês",
+            "pt": "Mudar o idioma para Português"
         }
     },
     "hero": {
