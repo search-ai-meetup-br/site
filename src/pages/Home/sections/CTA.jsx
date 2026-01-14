@@ -19,7 +19,7 @@ export default function CTA() {
 
         intervalRef.current = setInterval(() => {
             setIndex((prev) => (prev + 1) % ctaSlides.length)
-        }, 6000)
+        }, 8000)
     }
 
     const stopAutoplay = () => {
@@ -58,7 +58,6 @@ export default function CTA() {
 
             <div className="relative z-10 overflow-hidden">
                 <motion.div
-                    {...animProps}
                     className="flex"
                     animate={{ x: `-${index * 100}%` }}
                     transition={{ duration: 0.6, ease: "easeInOut" }}
@@ -66,26 +65,28 @@ export default function CTA() {
                     {ctaSlides.map((slide) => (
                         <div key={slide.id} className="min-w-full">
                             <div className="grid-design">
-                                <div className="col-span-4 sm:col-span-6 sm:col-start-2 lg:col-start-4 flex flex-col items-center justify-center px-8 text-center">
-                                    <h2 className="text-2xl xs:text-3xl lg:text-4xl">
-                                        {t(slide.title)}
-                                    </h2>
-
-                                    <p className="mt-6 mb-8 max-w-200">
-                                        {t(slide.description)}
-                                    </p>
-
+                                <motion.div
+                                    className="col-span-4 sm:col-span-6 sm:col-start-2 lg:col-start-4 flex flex-col items-center justify-center px-8 text-center"
+                                    variants={fadeUp}
+                                    initial="hidden"
+                                    whileInView="show"
+                                    viewport={{ once: true }}
+                                >
+                                    <h2 className="text-2xl xs:text-3xl lg:text-4xl">{t(slide.title)}</h2>
+                                    <p className="mt-6 mb-8 max-w-200">{t(slide.description)}</p>
                                     <a
                                         href={slide.link}
-                                        target="_blank" rel="noopener noreferrer"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="bg-linear-to-r cursor-pointer shadow from-primary to-secondary text-text-titles font-display font-semibold p-3 rounded-lg text-sm transition duration-500 hover:brightness-120 hover:scale-[102%] active:scale-98 focus-visible:outline-none focus-visible:ring focus-visible:ring-text-body focus-visible:scale-[102%]"
                                     >
                                         {t(slide.buttonText)}
                                     </a>
-                                </div>
+                                </motion.div>
                             </div>
                         </div>
                     ))}
+
                 </motion.div>
                 <div className="absolute z-10 bottom-8 left-0 right-0">
                     <div className="flex gap-3 mt-6 items-center col-span-4 justify-center sm:col-span-6 sm:col-start-2 lg:col-start-4">
