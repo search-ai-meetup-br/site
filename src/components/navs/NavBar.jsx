@@ -1,5 +1,5 @@
 import Logo from "../../assets/images/logo.svg?react"
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
@@ -8,6 +8,7 @@ export default function NavBar() {
 
     const { t, i18n } = useTranslation();
     const [open, setOpen] = useState(false);
+    const pendingScroll = useRef(null);
 
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
@@ -60,10 +61,10 @@ export default function NavBar() {
 
                 <button
                     onClick={() => setOpen(!open)}
-                    className="md:hidden"
+                    className="md:hidden cursor-pointer"
                     aria-label="Abrir menu"
                 >
-                    {open ? <X size={18} /> : <Menu size={18} />}
+                    {open ? <X size={20} /> : <Menu size={20} />}
                 </button>
             </div>
 
@@ -71,9 +72,9 @@ export default function NavBar() {
             <AnimatePresence>
                 {open && (
                     <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
+                        initial={{ maxHeight: 0, opacity: 0 }}
+                        animate={{ maxHeight: 300, opacity: 1 }}
+                        exit={{ maxHeight: 0, opacity: 0 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="md:hidden "
                     >

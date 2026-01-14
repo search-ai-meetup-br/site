@@ -1,5 +1,6 @@
 import ImgEvent from "../assets/images/events/event.png";
-import Img2101 from "../assets/images/events/21-01.png"
+import Img2101Desktop from "../assets/images/events/21-01/21-01-desktop.webp"
+import Img2101Mobile from "../assets/images/events/21-01/21-01-mobile.webp"
 
 export const EVENT_STATUS = {
     DRAFT: "draft",
@@ -10,7 +11,10 @@ export const EVENT_STATUS = {
 export const events = [
     {
         id: "jan-2026",
-        img: Img2101,
+        img: {
+            mobile: Img2101Mobile,
+            desktop: Img2101Desktop
+        },
         title: "events.cards.jan.title",
         dateTime: "21/01/2026 19:00 (BRT)",
         local: "Online",
@@ -53,7 +57,7 @@ export const events = [
         link: "",
         status: EVENT_STATUS.DRAFT,
     },
-     {
+    {
         id: "nov-2026",
         img: ImgEvent,
         title: "events.cards.nov.title (BRT)",

@@ -11,18 +11,8 @@ export default function CTA() {
     const [index, setIndex] = useState(0)
     const intervalRef = useRef(null)
 
-    const next = () => {
-        stopAutoplay()
-        setIndex((prev) => (prev + 1) % ctaSlides.length)
-        startAutoplay()
-    }
-
-    const prev = () => {
-        stopAutoplay()
-        setIndex((prev) => (prev - 1 + ctaSlides.length) % ctaSlides.length)
-        startAutoplay()
-    }
-
+    const next = () => setIndex((prev) => (prev + 1) % ctaSlides.length);
+    const prev = () => setIndex((prev) => (prev - 1 + ctaSlides.length) % ctaSlides.length);
 
     const startAutoplay = () => {
         clearInterval(intervalRef.current)
@@ -51,8 +41,19 @@ export default function CTA() {
     return (
         <section
             id="cta"
-            className="relative bg-[url('/bg-cta.png')] bg-cover bg-center py-6"
+            className="relative bg-cover bg-center py-6"
         >
+
+            <picture>
+                <source media="(max-width: 640px)" srcSet="/bg-cta-mobile.webp" />
+                <source media="(min-width: 641px)" srcSet="/bg-cta-desktop.webp" />
+                <img
+                    src="/bg-cta-desktop.webp"
+                    alt=""
+                    className="w-full h-full object-cover object-center absolute inset-0 z-0"
+                />
+            </picture>
+
             <div className="absolute inset-0 bg-background/40 z-0" />
 
             <div className="relative z-10 overflow-hidden">
@@ -88,23 +89,24 @@ export default function CTA() {
                 </motion.div>
                 <div className="absolute z-10 bottom-8 left-0 right-0">
                     <div className="flex gap-3 mt-6 items-center col-span-4 justify-center sm:col-span-6 sm:col-start-2 lg:col-start-4">
-                        <button onClick={prev} aria-label={t("cta.arrows.left")} className="cursor-pointer hover:text-text-titles transition-color duration-300 focus-visible:outline-none focus-visible:text-text-titles focus-visible:scale-110">
+                        <button onClick={prev} aria-label={t("cta.arrows.left")} className="p-2 cursor-pointer hover:text-text-titles transition-color duration-300 focus-visible:outline-none focus-visible:text-text-titles focus-visible:scale-110">
                             <ArrowLeft className="h-4 w-4" />
                         </button>
 
-                        {ctaSlides.map((_, i) => (
-                            <button
-                                key={i}
-                                onClick={() => {
-                                    stopAutoplay()
-                                    setIndex(i)
-                                    startAutoplay()
-                                }}
-                                className={`w-1.5 h-1.5 rounded-full transition ${i === index ? "bg-primary scale-125 hover:bg-secondary" : "bg-text-body hover:bg-text-titles"} cursor-pointer focus-visible:outline-none focus-visible:ring focus-visible:ring-text-body`}
-                            />
-                        ))}
+                        <div className="flex gap-2">
+                            {ctaSlides.map((_, i) => (
+                                <span
+                                    key={i}
+                                    aria-hidden="true"
+                                    className={`block w-1.5 h-1.5 rounded-full transition ${i === index
+                                        ? "bg-primary scale-125"
+                                        : "bg-text-body"
+                                        }`}
+                                />
+                            ))}
+                        </div>
 
-                        <button onClick={next} aria-label={t("cta.arrows.right")} className="cursor-pointer hover:text-text-titles transition-color duration-300 focus-visible:outline-none focus-visible:text-text-titles focus-visible:scale-110">
+                        <button onClick={next} aria-label={t("cta.arrows.right")} className="p-2 cursor-pointer hover:text-text-titles transition-color duration-300 focus-visible:outline-none focus-visible:text-text-titles focus-visible:scale-110">
                             <ArrowRight className="h-4 w-4" />
                         </button>
                     </div>

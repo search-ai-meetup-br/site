@@ -34,11 +34,22 @@ export default function Events() {
                                     className='bg-background group rounded-xl overflow-hidden shadow hover:shadow-hover transition-shadow duration-500 ease-out'
                                 >
                                     <div className="h-40 md:h-45 lg:h-50 overflow-hidden">
-                                        <img
-                                            src={event.img}
-                                            alt={t(event.title)}
-                                            className="h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-110"
-                                        />
+                                        <picture>
+                                            <source
+                                                media="(max-width: 640px)"
+                                                srcSet={event.img.mobile}
+                                            />
+                                            <source
+                                                media="(min-width: 641px)"
+                                                srcSet={event.img.desktop}
+                                            />
+                                            <img
+                                                src={event.img.desktop}
+                                                alt={t(event.title)}
+                                                className="h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-110"
+                                            />
+                                        </picture>
+
                                     </div>
                                     <div className='p-6'>
                                         <h3 className='text-lg mb-2'>{t(event.title)}</h3>
