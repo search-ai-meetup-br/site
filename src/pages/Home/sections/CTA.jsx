@@ -6,6 +6,9 @@ import ArrowLeft from "../../../assets/icons/i-arrow-left.svg?react"
 import ArrowRight from "../../../assets/icons/i-arrow-right.svg?react"
 import { fadeUp } from "../../../animations/reveal.js"
 
+import BgMobile from "../../../assets/images/bg-cta-mobile.webp"
+import BgDesktop from "../../../assets/images/bg-cta-desktop.webp"
+
 export default function CTA() {
     const { t } = useTranslation()
     const [index, setIndex] = useState(0)
@@ -45,10 +48,10 @@ export default function CTA() {
         >
 
             <picture>
-                <source media="(max-width: 640px)" srcSet="/bg-cta-mobile.webp" />
-                <source media="(min-width: 641px)" srcSet="/bg-cta-desktop.webp" />
+                <source media="(max-width: 640px)" srcSet={BgMobile} />
+                <source media="(min-width: 641px)" srcSet={BgDesktop} />
                 <img
-                    src="/bg-cta-desktop.webp"
+                    src={BgDesktop}
                     alt=""
                     className="w-full h-full object-cover object-center absolute inset-0 z-0"
                 />

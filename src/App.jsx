@@ -1,5 +1,5 @@
 import './styles/index.css'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home.jsx'
 import CodeOfConduct from './pages/CodeOfConduct/CodeOfConduct.jsx';
 
@@ -13,4 +13,3 @@ export default function App() {
     </Router>
   );
 }
-
