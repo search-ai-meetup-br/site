@@ -29,13 +29,6 @@ export default function CTA() {
         clearInterval(intervalRef.current)
     }
 
-    const animProps = {
-        variants: fadeUp,
-        initial: "hidden",
-        whileInView: "show",
-        viewport: { once: true, margin: "-100px" },
-    };
-
     useEffect(() => {
         startAutoplay()
         return () => stopAutoplay()
@@ -61,6 +54,7 @@ export default function CTA() {
 
             <div className="relative z-10 overflow-hidden">
                 <motion.div
+                    id="cta-slider"
                     className="flex"
                     animate={{ x: `-${index * 100}%` }}
                     transition={{ duration: 0.6, ease: "easeInOut" }}
@@ -93,7 +87,7 @@ export default function CTA() {
                 </motion.div>
                 <div className="absolute z-10 bottom-8 left-0 right-0">
                     <div className="flex gap-3 mt-6 items-center col-span-4 justify-center sm:col-span-6 sm:col-start-2 lg:col-start-4">
-                        <button onClick={prev} aria-label={t("cta.arrows.left")} className="p-2 cursor-pointer hover:text-text-titles transition-color duration-300 focus-visible:outline-none focus-visible:text-text-titles focus-visible:scale-110">
+                        <button onClick={prev} aria-label={t("cta.arrows.left")} aria-controls="cta-slider" type="button" className="p-2 cursor-pointer hover:text-text-titles transition-color duration-300 focus-visible:outline-none focus-visible:text-text-titles focus-visible:scale-110">
                             <ArrowLeft className="h-4 w-4" />
                         </button>
 
@@ -110,7 +104,7 @@ export default function CTA() {
                             ))}
                         </div>
 
-                        <button onClick={next} aria-label={t("cta.arrows.right")} className="p-2 cursor-pointer hover:text-text-titles transition-color duration-300 focus-visible:outline-none focus-visible:text-text-titles focus-visible:scale-110">
+                        <button onClick={next} aria-label={t("cta.arrows.right")} aria-controls="cta-slider" type="button" className="p-2 cursor-pointer hover:text-text-titles transition-color duration-300 focus-visible:outline-none focus-visible:text-text-titles focus-visible:scale-110">
                             <ArrowRight className="h-4 w-4" />
                         </button>
                     </div>

@@ -1,19 +1,11 @@
-import Header from "../../components/layout/Header";
-import Main from "../../components/layout/Main";
-import Footer from "../../components/layout/Footer";
-import NavBarInternal from "../../components/navs/NavBarInternal.jsx"
-import CompleteCodeOfCondute from "./sections/CompleteCodeOfCondute.jsx"
+import PublicLayout from "../../layouts/PublicLayout.jsx";
+import NavBarInternal from "../../components/navigation/NavBarInternal.jsx";
+import CompleteCodeOfCondute from "../../components/sections/code-of-conduct/CompleteCodeOfCondute.jsx";
 
 export default function CodeOfConduct() {
     return (
-        <>
-            <Header>
-                <NavBarInternal />
-            </Header>
-            <Main>
-                <CompleteCodeOfCondute />
-            </Main>
-            <Footer />
-        </>
+        <PublicLayout nav={<NavBarInternal />}>
+            <CompleteCodeOfCondute />
+        </PublicLayout>
     );
 }

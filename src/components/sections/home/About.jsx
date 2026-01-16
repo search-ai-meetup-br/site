@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { useTranslation } from "react-i18next";
 import { aboutCards } from "../../../data/aboutCards";
 import { fadeUp } from "../../../animations/reveal.js"
+import Container from "../../ui/Container.jsx";
 
 export default function About() {
 
@@ -17,7 +18,7 @@ export default function About() {
     return (
         <section id="about">
 
-            <div className='grid-design max-w-7xl mx-auto'>
+            <Container>
                 <motion.h2
                     {...animProps}
                     className='text-2xl xs:text-3xl lg:text-4xl col-span-4 text-center sm:col-start-2 sm:col-span-6 lg:col-start-4'
@@ -52,7 +53,7 @@ export default function About() {
                         )
                     })}
                 </div>
-            </div>
+            </Container>
 
         </section>
     )

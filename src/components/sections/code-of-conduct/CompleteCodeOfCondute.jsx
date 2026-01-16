@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { motion } from 'framer-motion'
 import { fadeUp } from "../../../animations/reveal.js"
+import Container from "../../ui/Container.jsx";
 
 export default function CodeOfConductPage() {
     const { t } = useTranslation();
@@ -15,7 +16,7 @@ export default function CodeOfConductPage() {
     return (
         <section className="bg-linear-to-br from-background to-primary/5">
 
-            <div className="max-w-7xl mx-auto grid-design">
+            <Container>
 
                 <div className="col-span-4 sm:col-span-8 lg:col-span-12">
                     <motion.h1
@@ -90,7 +91,7 @@ export default function CodeOfConductPage() {
                     </div>
                 </div>
 
-            </div>
+            </Container>
         </section>
     );
 }

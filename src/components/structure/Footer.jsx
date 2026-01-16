@@ -3,6 +3,7 @@ import IconLinkedin from "../../assets/icons/i-linkedin.svg?react"
 import IconEmail from "../../assets/icons/i-email.svg?react"
 import IconMeetup from "../../assets/icons/i-meetup.svg?react"
 import { useTranslation } from "react-i18next";
+import Container from "../ui/Container.jsx";
 
 export default function Footer() {
 
@@ -10,12 +11,9 @@ export default function Footer() {
 
     return (
         <footer id="footer" className="border-t border-text-body/20">
-            <div className='grid-design max-w-7xl mx-auto'>
+            <Container>
                 <div className="col-span-4 lg:col-span-5 space-y-4">
-                    <div
-                        href="#hero"
-                        className="flex items-center uppercase text-white font-semibold font-display text-sm"
-                    >
+                    <div className="flex items-center uppercase text-white font-semibold font-display text-sm">
                         <Logo className="h-5 w-5 mr-2" />
                         <span>Search & AI</span>
                         <span className="text-gradient ml-2">Meetup BR</span>
@@ -52,7 +50,7 @@ export default function Footer() {
                         </a>
                     </div>
                 </div>
-            </div>
+            </Container>
         </footer>
     )
 }

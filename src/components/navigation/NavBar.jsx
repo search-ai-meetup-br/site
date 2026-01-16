@@ -1,60 +1,49 @@
 import Logo from "../../assets/images/logo.svg?react"
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
 
     const { t, i18n } = useTranslation();
     const [open, setOpen] = useState(false);
-    const pendingScroll = useRef(null);
-
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
-    };
-
-    const handleNavigate = (e, target) => {
-        e.preventDefault();
-        setOpen(false);
-
-        setTimeout(() => {
-            document.querySelector(target)?.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-            });
-        }, 100);
     };
 
     return (
         <div className="fixed top-0 w-full z-50 bg-background/85 md:bg-background/70 backdrop-blur-md border-b border-text-body/20">
             <div className="px-6 xs:px-10 md:px-12 py-4 flex justify-between items-center max-w-7xl mx-auto">
 
-                <a
-                    href="#hero"
+                <Link
+                    to="/#hero"
                     className="flex items-center uppercase text-white font-semibold font-display text-sm"
                 >
                     <Logo className="h-5 w-5 mr-2" />
                     <span>Search & AI</span>
                     <span className="text-gradient ml-2">Meetup BR</span>
-                </a>
+                </Link>
 
                 <div className="hidden md:flex md:gap-4 text-sm items-center">
                     <nav className="space-x-4">
-                        <a href="#about" className="hover:text-primary transition-colors duration-300 active:text-secondary focus-visible:outline-none focus-visible:text-primary">{t("navBar.about")}</a>
-                        <a href="#events" className="hover:text-primary transition-colors duration-300 active:text-secondary focus-visible:outline-none focus-visible:text-primary">{t("navBar.events")}</a>
-                        <a href="#cta" className="hover:text-primary transition-colors duration-300 active:text-secondary focus-visible:outline-none focus-visible:text-primary">{t("navBar.cta")}</a>
-                        <a href="#codeOfCondute" className="hover:text-primary transition-colors duration-300 active:text-secondary focus-visible:outline-none focus-visible:text-primary">{t("navBar.codeOfCondute")}</a>
+                        <Link to="/#about" className="hover:text-primary transition-colors duration-300 active:text-secondary focus-visible:outline-none focus-visible:text-primary">{t("navBar.about")}</Link>
+                        <Link to="/#events" className="hover:text-primary transition-colors duration-300 active:text-secondary focus-visible:outline-none focus-visible:text-primary">{t("navBar.events")}</Link>
+                        <Link to="/#cta" className="hover:text-primary transition-colors duration-300 active:text-secondary focus-visible:outline-none focus-visible:text-primary">{t("navBar.cta")}</Link>
+                        <Link to="/#codeOfCondute" className="hover:text-primary transition-colors duration-300 active:text-secondary focus-visible:outline-none focus-visible:text-primary">{t("navBar.codeOfCondute")}</Link>
                     </nav>
                     <span>|</span>
                     <div className="space-x-4">
                         <button
                             onClick={() => changeLanguage("pt")}
                             aria-label={t("navBar.languages.pt")}
+                            type="button"
                             className={`transition-colors duration-300 ${i18n.language === "pt" ? "text-primary font-semibold" : "hover:text-primary"} active:text-secondary focus-visible:outline-none focus-visible:text-primary cursor-pointer`}>PT</button>
                         <button
                             onClick={() => changeLanguage("en")}
                             aria-label={t("navBar.languages.en")}
+                            type="button"
                             className={`transition-colors duration-300 ${i18n.language === "en" ? "text-primary font-semibold" : "hover:text-primary"} active:text-secondary focus-visible:outline-none focus-visible:text-primary cursor-pointer`}>EN</button>
                     </div>
                 </div>
@@ -62,7 +51,10 @@ export default function NavBar() {
                 <button
                     onClick={() => setOpen(!open)}
                     className="md:hidden cursor-pointer"
+                    type="button"
                     aria-label="Abrir menu"
+                    aria-expanded={open}
+                    aria-controls="mobile-menu"
                 >
                     {open ? <X size={20} /> : <Menu size={20} />}
                 </button>
@@ -72,6 +64,7 @@ export default function NavBar() {
             <AnimatePresence>
                 {open && (
                     <motion.div
+                        id="mobile-menu"
                         initial={{ maxHeight: 0, opacity: 0 }}
                         animate={{ maxHeight: 300, opacity: 1 }}
                         exit={{ maxHeight: 0, opacity: 0 }}
@@ -80,19 +73,19 @@ export default function NavBar() {
                     >
                         <nav className="flex flex-col text-center px-6 py-4 space-y-4 text-sm">
                             {[
-                                [t('navBar.about'), "#about"],
-                                [t('navBar.events'), "#events"],
-                                [t('navBar.cta'), "#cta"],
-                                [t('navBar.codeOfCondute'), "#codeOfCondute"],
-                            ].map(([label, href]) => (
-                                <a
+                                [t('navBar.about'), "/#about"],
+                                [t('navBar.events'), "/#events"],
+                                [t('navBar.cta'), "/#cta"],
+                                [t('navBar.codeOfCondute'), "/#codeOfCondute"],
+                            ].map(([label, to]) => (
+                                <Link
                                     key={label}
-                                    href={href}
-                                    onClick={(e) => handleNavigate(e, href)}
+                                    to={to}
+                                    onClick={() => setOpen(false)}
                                     className="cursor-pointer hover:text-primary transition-colors duration-300 active:text-secondary focus-visible:outline-none focus-visible:text-primary"
                                 >
                                     {label}
-                                </a>
+                                </Link>
 
                             ))}
 
@@ -100,10 +93,12 @@ export default function NavBar() {
                                 <button
                                     onClick={() => changeLanguage("pt")}
                                     aria-label={t("navBar.languages.pt")}
+                                    type="button"
                                     className={`transition-colors duration-300 ${i18n.language === "pt" ? "text-primary font-semibold" : "hover:text-primary"} active:text-secondary focus-visible:outline-none focus-visible:text-primary cursor-pointer`}>PT</button>
                                 <button
                                     onClick={() => changeLanguage("en")}
                                     aria-label={t("navBar.languages.en")}
+                                    type="button"
                                     className={`transition-colors duration-300 ${i18n.language === "en" ? "text-primary font-semibold" : "hover:text-primary"} active:text-secondary focus-visible:outline-none focus-visible:text-primary cursor-pointer`}>EN</button>
                             </div>
                         </nav>

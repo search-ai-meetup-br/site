@@ -4,6 +4,7 @@ import { EVENT_STATUS, events } from "../../../data/events.js"
 import { fadeUp } from "../../../animations/reveal.js"
 import IconPin from "../../../assets/icons/i-pin.svg?react"
 import IconClock from "../../../assets/icons/i-clock.svg?react"
+import Container from "../../ui/Container.jsx";
 
 export default function Events() {
 
@@ -18,7 +19,7 @@ export default function Events() {
 
     return (
         <section id="events" className='bg-surface'>
-            <div className='grid-design max-w-7xl mx-auto'>
+            <Container>
                 <motion.h2
                     {...animProps}
                     className='text-2xl xs:text-3xl lg:text-4xl col-span-4 sm:col-span-8 mb-4'>{t("events.title")}
@@ -74,7 +75,7 @@ export default function Events() {
                         })
                     }
                 </div>
-            </div>
+            </Container>
 
         </section>
     )

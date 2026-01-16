@@ -1,28 +1,18 @@
-import Header from "../../components/layout/Header.jsx"
-import Footer from "../../components/layout/Footer.jsx"
-import Main from "../../components/layout/Main.jsx"
-
-import About from "./sections/About.jsx"
-import Events from "./sections/Events.jsx"
-import CTA from "./sections/CTA.jsx"
-import CodeOfCondute from "./sections/CodeOfCondute.jsx"
-import Hero from "./sections/Hero.jsx"
-import NavBar from "../../components/navs/NavBar.jsx"
+import PublicLayout from "../../layouts/PublicLayout.jsx";
+import About from "../../components/sections/home/About.jsx";
+import Events from "../../components/sections/home/Events.jsx";
+import CTA from "../../components/sections/home/CTA.jsx";
+import CodeOfCondute from "../../components/sections/home/CodeOfCondute.jsx";
+import Hero from "../../components/sections/home/Hero.jsx";
+import NavBar from "../../components/navigation/NavBar.jsx";
 
 export default function Home() {
     return (
-        <>
-            <Header>
-                <NavBar />
-                <Hero />
-            </Header>
-            <Main>
-                <About />
-                <Events />
-                <CTA />
-                <CodeOfCondute />
-            </Main>
-            <Footer />
-        </>
+        <PublicLayout nav={<NavBar />} headerContent={<Hero />}>
+            <About />
+            <Events />
+            <CTA />
+            <CodeOfCondute />
+        </PublicLayout>
     )
 }

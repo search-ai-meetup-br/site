@@ -5,6 +5,8 @@ import IconMeetup from "../../../assets/icons/i-meetup.svg?react"
 import Logo from "../../../assets/images/logo.svg?react"
 import { motion } from "framer-motion";
 import { titleContainer, titleWord, fadeUpSoft, heroIntro } from "../../../animations/reveal.js";
+import Container from "../../ui/Container.jsx";
+import { Link } from "react-router-dom";
 
 
 export default function Hero() {
@@ -23,7 +25,7 @@ export default function Hero() {
             animate="show"
         >
 
-            <div className="grid-design mx-auto max-w-7xl">
+            <Container>
                 <motion.div
                     className="col-span-4 flex flex-col items-center gap-4 sm:col-span-6 sm:col-start-2 lg:col-start-4"
                     variants={fadeUpSoft}
@@ -75,10 +77,10 @@ export default function Hero() {
                         className="bg-linear-to-r shadow from-primary to-secondary text-text-titles font-display font-semibold p-3 rounded-lg text-center text-sm sm:flex-1 transition-colors-transform duration-500 hover:brightness-120 hover:scale-[102%] active:scale-[98%] focus-visible:outline-none focus-visible:ring focus-visible:ring-primary focus-visible:scale-[102%]">
                         {t("hero.buttons.join")}
                     </a>
-                    <a href="#events"
+                    <Link to="/#events"
                         className="text-text-titles p-3 font-display font-semibold rounded-lg border border-text-body bg-surface text-center text-sm sm:flex-1 transition-colors-transform duration-500 hover:bg-primary/10 hover:scale-[102%] active:scale-[98%] focus-visible:outline-none focus-visible:ring focus-visible:ring-text-titles focus-visible:scale-[102%]">
                         {t("hero.buttons.events")}
-                    </a>
+                    </Link>
                 </motion.div>
                 <motion.div
                     className="flex gap-4 col-span-4 items-center justify-center sm:col-span-6 sm:col-start-2 lg:col-start-4"
@@ -87,7 +89,7 @@ export default function Hero() {
                     <a href="mailto:searchai-meetupbr@outlook.com" aria-label={t("hero.links.email")} className="transition-colors-transform duration-300 hover:text-primary hover:scale-105 active:scale-[98%] focus-visible:outline-none focus-visible:scale-105 focus-visible:text-primary"><IconEmail className="h-7" /></a>
                     <a href="https://www.meetup.com/search-ai-meetup-br/" target="_blank" rel="noopener noreferrer" aria-label={t("hero.links.meetup")} className="transition-colors-transform duration-300 hover:text-primary hover:scale-105 active:scale-[98%] focus-visible:outline-none focus-visible:scale-105 focus-visible:text-primary"><IconMeetup className="h-7" /></a>
                 </motion.div>
-            </div>
+            </Container>
 
         </motion.section>
     )
