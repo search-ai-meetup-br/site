@@ -22,7 +22,7 @@ export default function CTA() {
 
         intervalRef.current = setInterval(() => {
             setIndex((prev) => (prev + 1) % ctaSlides.length)
-        }, 8000)
+        }, 15000)
     }
 
     const stopAutoplay = () => {

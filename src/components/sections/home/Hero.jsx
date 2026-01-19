@@ -76,7 +76,7 @@ export default function Hero() {
                         rel="noopener noreferrer"
                         className="bg-linear-to-r shadow from-primary to-secondary text-text-titles font-display font-semibold p-3 rounded-lg text-center text-sm sm:flex-1 transition-colors-transform duration-500 hover:brightness-120 hover:scale-[102%] active:scale-[98%] focus-visible:outline-none focus-visible:ring focus-visible:ring-primary focus-visible:scale-[102%]">
                         {t("hero.buttons.join")}
-                    </a>
+                    </a> 
                     <Link to="/#events"
                         className="text-text-titles p-3 font-display font-semibold rounded-lg border border-text-body bg-surface text-center text-sm sm:flex-1 transition-colors-transform duration-500 hover:bg-primary/10 hover:scale-[102%] active:scale-[98%] focus-visible:outline-none focus-visible:ring focus-visible:ring-text-titles focus-visible:scale-[102%]">
                         {t("hero.buttons.events")}
