@@ -50,28 +50,11 @@
     },
     "events": {
         "title": "Próximos Eventos",
-        "cards": {
-            "jan": {
-                "title": "1º Meetup Search & AI BR"
-            },
-            "mar": {
-                "title": "Title"
-            },
-            "apr": {
-                "title": "Title"
-            },
-            "jul": {
-                "title": "Title"
-            },
-            "sep": {
-                "title": "Title"
-            },
-            "nov": {
-                "title": "Title"
-            }
-        },
+        "loading": "Carregando eventos...",
+        "error": "Erro ao carregar eventos.",
         "buttons": {
-            "join": "Inscreva-se"
+            "join": "Inscreva-se",
+            "soon": "Em breve"
         }
     },
     "cta": {

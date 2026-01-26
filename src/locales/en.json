@@ -50,28 +50,11 @@
     },
     "events": {
         "title": "Upcoming Events",
-        "cards": {
-            "jan": {
-                "title": "1st Search & AI BR Meetup"
-            },
-            "mar": {
-                "title": "Title"
-            },
-            "apr": {
-                "title": "Title"
-            },
-            "jul": {
-                "title": "Title"
-            },
-            "sep": {
-                "title": "Title"
-            },
-            "nov": {
-                "title": "Title"
-            }
-        },
+        "loading": "Loading events...",
+        "error": "Failed to load events.",
         "buttons": {
-            "join": "Register"
+            "join": "Register",
+            "soon": "Coming soon"
         }
     },
     "cta": {
